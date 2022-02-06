@@ -1,6 +1,5 @@
 from runner import app, make_port
-import controllers.black_white as func
-
+from controllers.black_white import grayscale_transform
 
 @app.route('/')
 def index():
@@ -18,4 +17,4 @@ def index():
 
 @app.route('/black-white/', methods=["GET"])
 def black_white_transform():
-    return func.black_white_transform()
+    return grayscale_transform()
