@@ -16,6 +16,6 @@ def index():
     return ' '.join(simple_render)
 
 
-@app.route('/black-white', methods=['GET'])
+@app.route('/black-white/', methods=["GET"])
 def black_white_transform():
     return func.black_white_transform()
