@@ -6,7 +6,7 @@ clear:
 	rm -rf venv
 
 venv:
-	python3 -m venv venv venv
+	python3 -m venv venv
 
 install_requirements:
 	${PIP} install -r requirements.txt
