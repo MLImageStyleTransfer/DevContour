@@ -1,8 +1,9 @@
-import React, {Ref, useEffect, useRef, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import './App.css'
 
 import ContentBox from '../components/content-box/content-box'
 import LoadBox from '../components/load-box/load-box'
+import {Api} from '../api/api'
 
 function App() {
   const myStorage = window.localStorage
@@ -37,10 +38,25 @@ function App() {
     myStorage.removeItem('currImage')
   }
 
+  const grayscaleTransform = () => {
+    Api.recolor({image: image})
+      .then(data => data.json())
+      .then(file => {
+        // const url = URL.createObjectURL(file)
+        // setImage(url)
+        // myStorage.setItem('currImage', url)
+        console.log(file)
+        console.log("OK")
+      })
+      // .catch(error => console.error(error))
+  }
+
   return (
     <div className="App">
       {isLoaded
-        ? <ContentBox stopEdit={stopEdit} image={image}/>
+        ? <ContentBox stopEdit={stopEdit}
+                      image={image}
+                      grayscaleTransform={grayscaleTransform}/>
         : <LoadBox loadImage={loadImage}/>
       }
     </div>

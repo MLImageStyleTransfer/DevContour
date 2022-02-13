@@ -1,4 +1,4 @@
-import {config} from '../../config'
+import {config} from './config'
 
 import {BASE_URL, RECOLOR_URL} from './constants'
 
@@ -6,12 +6,14 @@ import {RequestType} from './types'
 
 export class Api {
   public static recolor(request: RequestType): Promise<any> {
-    return fetch(Api.buildURL(), {
-      method: 'GET',
+    console.log(Api.buildURL())
+    return fetch(Api.buildURL() + `?xxx=${333}`, {
+      method: 'POST',
       headers: {
+        // 'Content-type': 'multipart/form-data'
         'Content-type': 'application/json'
       },
-      body: JSON.stringify(request)
+      body: JSON.stringify({'xxx': 333})
     })
   }
 

@@ -1,5 +1,7 @@
 from flask import Flask
 from dotenv import dotenv_values
+from policy.cors import fix_cors
+from flask_cors import CORS
 
 
 def make_port() -> int:
@@ -10,8 +12,10 @@ def make_port() -> int:
 
 
 app = Flask(__name__)
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 from views import *
 
 if __name__ == "__main__":
+#     fix_cors(app)
     app.run(debug=True, port=make_port())

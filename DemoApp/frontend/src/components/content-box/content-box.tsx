@@ -5,13 +5,18 @@ import style from './content-box.module.css'
 type Props = {
   image?: string
   stopEdit: () => void
+  grayscaleTransform: () => void
 }
 
-export default function ContentBox({image, stopEdit}: Props) {
+export default function ContentBox({
+  image,
+  stopEdit,
+  grayscaleTransform,
+}: Props) {
   return (
     <div className={style.ground}>
       <div className={style.content}>
-        <h2 className={style.header}>Редактор</h2>
+        <div className={style.header}>Редактор</div>
         <div className={style.imageWrapper}>
           {Boolean(image) && <img
               src={image}
@@ -23,7 +28,11 @@ export default function ContentBox({image, stopEdit}: Props) {
           <div className={`${style.customSize} input-group`}>
             <div className="input-group-prepend">
               <div className="input-group-text">
-                <input type="checkbox" aria-label="Checkbox for following text input"/>
+                <input
+                  type="checkbox"
+                  aria-label="Checkbox for following text input"
+                  onChange={grayscaleTransform}
+                />
               </div>
             </div>
             <label className="form-control" aria-label="Text input with checkbox">

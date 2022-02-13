@@ -1,5 +1,5 @@
 export type RawConfig = {
-  PORT?: string
+  SERVICE_PORT?: string
 }
 
 export type Config = {
