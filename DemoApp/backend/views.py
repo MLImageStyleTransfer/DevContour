@@ -6,10 +6,10 @@ from runner import app, make_port
 from controllers.black_white import grayscale_transform
 
 # from policy.cors import create_response
-from flask_cors import cross_origin
+# from flask_cors import cross_origin
 
 @app.route('/')
-@cross_origin()
+# @cross_origin()
 def index():
     open_tag = '<h1 width="100%" align="center">'
     close_tag = '</h1>'
@@ -22,13 +22,6 @@ def index():
 
     return ' '.join(simple_render)
 
-# def create_response(responseBody, responseType='text/json'):
-#     res = make_response(responseBody)
-#     res.headers['Content-Type'] = responseType
-#     res.headers["Access-Control-Allow-Origin"] = "*"
-#     res.headers["Access-Control-Allow-Methods"] = "POST, GET, OPTIONS, PUT, DELETE"
-#     res.headers["Access-Control-Allow-Headers"] = "Accept, Content-Type, Content-Length, Accept-Encoding, Token"
-#     return res
 
 @app.route('/api/grayscale/', methods=['POST'])
 # @cross_origin()
@@ -41,6 +34,7 @@ def black_white_transform():
 #     return create_response(
 #         jsonify({'file': grayscale_transform(request.files['file'].stream)})
 #     )
+
     value = str(request.data)[3:-2]
     grayscale_transform(value)
     response = jsonify(ans="fun")

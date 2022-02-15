@@ -5,6 +5,11 @@ import ContentBox from '../components/content-box/content-box'
 import LoadBox from '../components/load-box/load-box'
 import {Api} from '../api/api'
 
+/**
+ * Stackoverflow guide code
+ * Provides pseudo strategy for transform
+ * @info blob Image -> base64
+ */
 // function blobToBase64(blob, callback) {
 //   let reader = new FileReader()
 //   reader.onload = function() {
