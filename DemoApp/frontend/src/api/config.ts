@@ -4,5 +4,5 @@ import {Config, RawConfig} from './types'
 
 export const config: Config = {
   // port: (environment as RawConfig)?.SERVICE_PORT || DEFAULT_PORT
-  port: '5000'
+  port: '5555'
 }

@@ -31,8 +31,8 @@ def index():
 #     return res
 
 @app.route('/api/grayscale/', methods=['POST'])
-@cross_origin()
-def black_white_transform(xxx):
+# @cross_origin()
+def black_white_transform():
 #     request.headers['Content-Type'] = 'text/json'
 #     request.headers["Access-Control-Allow-Origin"] = "*"
 #     request.headers["Access-Control-Allow-Methods"] = "POST, GET, OPTIONS, PUT, DELETE"
@@ -41,10 +41,9 @@ def black_white_transform(xxx):
 #     return create_response(
 #         jsonify({'file': grayscale_transform(request.files['file'].stream)})
 #     )
-#     response = jsonify(message="Simple server is running")
+    value = str(request.data)[3:-2]
+    grayscale_transform(value)
+    response = jsonify(ans="fun")
 
-    # Enable Access-Control-Allow-Origin
-#     response.headers.add("Access-Control-Allow-Origin", "http://127.0.0.1:3000")
-#     response.headers["Access-Control-Allow-Origin"] = "http://127.0.0.1:3000"
-#     return response
-    return jsonify('AAAAAAs\t' + str(xxx))
+    response.headers.add("Access-Control-Allow-Origin", "http://localhost:3000")
+    return response

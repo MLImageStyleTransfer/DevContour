@@ -5,6 +5,16 @@ import ContentBox from '../components/content-box/content-box'
 import LoadBox from '../components/load-box/load-box'
 import {Api} from '../api/api'
 
+// function blobToBase64(blob, callback) {
+//   let reader = new FileReader()
+//   reader.onload = function() {
+//     const dataUrl = reader.result;
+//     const base64 = dataUrl.split(',')[1];
+//     callback(base64);
+//   };
+//   reader.readAsDataURL(blob);
+// };
+
 function App() {
   const myStorage = window.localStorage
 
@@ -23,6 +33,7 @@ function App() {
     let file = ref?.current.files[0];
     if (file) {
       const url = URL.createObjectURL(file)
+      console.log(file)
       setImage(url)
       setIsLoaded(true)
       myStorage.setItem('currImage', url)
@@ -48,7 +59,10 @@ function App() {
         console.log(file)
         console.log("OK")
       })
-      // .catch(error => console.error(error))
+      .catch(error => {
+        // console.error(error)
+        console.info("FAIL")
+      })
   }
 
   return (
