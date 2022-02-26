@@ -5,13 +5,15 @@ import style from './content-box.module.css'
 type Props = {
   image?: string
   stopEdit: () => void
-  grayscaleTransform: () => void
+  transform: () => void
+  checked: boolean
 }
 
 export default function ContentBox({
   image,
   stopEdit,
-  grayscaleTransform,
+  transform,
+  checked,
 }: Props) {
   return (
     <div className={style.ground}>
@@ -29,9 +31,10 @@ export default function ContentBox({
             <div className="input-group-prepend">
               <div className="input-group-text">
                 <input
+                  checked={checked}
                   type="checkbox"
                   aria-label="Checkbox for following text input"
-                  onChange={grayscaleTransform}
+                  onChange={transform}
                 />
               </div>
             </div>

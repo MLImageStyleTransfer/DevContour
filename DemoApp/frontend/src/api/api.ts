@@ -9,7 +9,7 @@ export class Api {
     return fetch(Api.buildURL(), {
       method: 'POST',
       headers: {
-        'Content-type': 'image/png'
+        'Content-type': 'image/jpeg'
       },
       body: JSON.stringify(request?.image)
     })

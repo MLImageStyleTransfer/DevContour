@@ -1,11 +1,12 @@
-from base64 import b64encode
+import base64
 from io import BytesIO
 from PIL import Image, ImageEnhance
 
 def grayscale_transform(coloured_image_code: str) -> str:
     # image creating
-    coloured_image_path = '/mnt/d/Computer_science/HSE/2_course/coursework/repo/DevContour/DemoApp/assets/demo.png'
-    coloured_img = Image.open(coloured_image_path)
+    code_only = coloured_image_code[23:]
+    img_data = base64.b64decode(code_only)
+    coloured_img = Image.open(BytesIO(img_data))
 
     # grayscale transformation
     filtered = ImageEnhance.Color(coloured_img)
@@ -13,5 +14,5 @@ def grayscale_transform(coloured_image_code: str) -> str:
 
     # return base64 format
     buffered = BytesIO()
-    grayscaled_img.save(buffered, format='PNG')
-    return b64encode(buffered.getvalue())
+    grayscaled_img.save(buffered, format='JPEG')
+    return base64.b64encode(buffered.getvalue())
