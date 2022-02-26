@@ -4,21 +4,7 @@ import './App.css'
 import ContentBox from '../components/content-box/content-box'
 import LoadBox from '../components/load-box/load-box'
 import {Api} from '../api/api'
-
-/**
- * Stackoverflow guide code
- * Provides pseudo strategy for transform
- * @info blob Image -> base64
- */
-// function blobToBase64(blob, callback) {
-//   let reader = new FileReader()
-//   reader.onload = function() {
-//     const dataUrl = reader.result;
-//     const base64 = dataUrl.split(',')[1];
-//     callback(base64);
-//   };
-//   reader.readAsDataURL(blob);
-// };
+import {base64ToURL} from '../common/helpers/base64ToURL'
 
 function App() {
   const myStorage = window.localStorage
@@ -56,17 +42,16 @@ function App() {
 
   const grayscaleTransform = () => {
     Api.recolor({image: image})
-      .then(data => data.json())
-      .then(file => {
-        // const url = URL.createObjectURL(file)
-        // setImage(url)
-        // myStorage.setItem('currImage', url)
-        console.log(file)
+      .then(data => data.text())
+      .then(async (file) => {
+        const url = await base64ToURL(file)
+
+        setImage(url)
+        myStorage.setItem('currImage', url)
         console.log("OK")
       })
       .catch(error => {
-        // console.error(error)
-        console.info("FAIL")
+        console.error(error)
       })
   }
 

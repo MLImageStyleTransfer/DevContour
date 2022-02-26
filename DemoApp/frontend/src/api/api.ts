@@ -6,12 +6,10 @@ import {RequestType} from './types'
 
 export class Api {
   public static recolor(request?: RequestType): Promise<any> {
-    console.log(Api.buildURL())
     return fetch(Api.buildURL(), {
       method: 'POST',
       headers: {
-        // 'Content-type': 'multipart/form-data'
-        'Content-type': 'text/json'
+        'Content-type': 'image/png'
       },
       body: JSON.stringify(request?.image)
     })

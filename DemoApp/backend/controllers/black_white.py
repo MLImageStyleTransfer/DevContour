@@ -1,11 +1,17 @@
+from base64 import b64encode
+from io import BytesIO
 from PIL import Image, ImageEnhance
 
-def grayscale_transform(coloured_image_blob: str) -> str:
-#     First try to construct PIL Image from blob
-#     coloured_img = Image.from_blob(coloured_image_blob)
+def grayscale_transform(coloured_image_code: str) -> str:
+    # image creating
+    coloured_image_path = '/mnt/d/Computer_science/HSE/2_course/coursework/repo/DevContour/DemoApp/assets/demo.png'
+    coloured_img = Image.open(coloured_image_path)
 
+    # grayscale transformation
+    filtered = ImageEnhance.Color(coloured_img)
+    grayscaled_img = filtered.enhance(0)
 
-#     filter = ImageEnhance.Color(coloured_img)
-#     grayscaled_img = filter.enhance(0)
-#     grayscaled_img.save('../../assets/res.png', 'PNG')
-    return 'ttt'
+    # return base64 format
+    buffered = BytesIO()
+    grayscaled_img.save(buffered, format='PNG')
+    return b64encode(buffered.getvalue())
