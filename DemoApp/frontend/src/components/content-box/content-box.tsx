@@ -49,7 +49,7 @@ export default function ContentBox({
             Отмена
           </button>
           <button
-            onClick={stopEdit}
+            onClick={() => {alert("Увы, пока что сохранение не работает...")}}
             className="btn btn-success"
           >
             Сохранить

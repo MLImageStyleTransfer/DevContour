@@ -40,6 +40,7 @@ function App() {
     setIsLoaded(() => {
       myStorage.removeItem('currImage')
       myStorage.removeItem('greyImage')
+      setChecked(false)
       return false
     })
   }
