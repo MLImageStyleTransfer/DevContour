@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c102a776-72ee-4bd6-9070-b8d8816646a2" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/DemoApp/backend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/docker-compose.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/DemoApp/frontend/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoApp/assets/demo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DemoApp/assets/res.png" beforeDir="false" />
@@ -89,7 +90,7 @@
       <workItem from="1645961707931" duration="53000" />
       <workItem from="1645961855034" duration="1084000" />
       <workItem from="1646773101536" duration="1207000" />
-      <workItem from="1646859124278" duration="2256000" />
+      <workItem from="1646859124278" duration="2832000" />
     </task>
     <servers />
   </component>
