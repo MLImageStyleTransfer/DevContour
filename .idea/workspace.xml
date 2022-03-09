@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c102a776-72ee-4bd6-9070-b8d8816646a2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DemoApp/backend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DemoApp/frontend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoApp/assets/demo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoApp/assets/res.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemoApp/backend/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/DemoApp/backend/Makefile" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="ProjectId" id="24htBQRXfDC7uVC1KDghdGGTENO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Computer_science\HSE\2_course\coursework\repo\DevContour\DemoApp\frontend\src\api" />
+      <recent name="D:\Computer_science\HSE\2_course\coursework\repo\DevContour\DemoApp\frontend\src\general" />
+      <recent name="D:\Computer_science\HSE\2_course\coursework\repo\DevContour\DemoApp\backend" />
+      <recent name="D:\Computer_science\HSE\2_course\coursework\repo\DevContour\DemoApp\backend\controllers" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="run" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/DemoApp/backend/Makefile" target="run" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile Target.run" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c102a776-72ee-4bd6-9070-b8d8816646a2" name="Default Changelist" comment="" />
+      <created>1644094512473</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644094512473</updated>
+      <workItem from="1644094515582" duration="9612000" />
+      <workItem from="1644149190207" duration="2578000" />
+      <workItem from="1644160768028" duration="5268000" />
+      <workItem from="1644526478664" duration="3296000" />
+      <workItem from="1644604513514" duration="20791000" />
+      <workItem from="1644659463715" duration="9797000" />
+      <workItem from="1644780079122" duration="641000" />
+      <workItem from="1644840735824" duration="60000" />
+      <workItem from="1644840808826" duration="2000" />
+      <workItem from="1644958299754" duration="1044000" />
+      <workItem from="1645041574112" duration="1190000" />
+      <workItem from="1645733754817" duration="587000" />
+      <workItem from="1645887933656" duration="10043000" />
+      <workItem from="1645910976692" duration="5017000" />
+      <workItem from="1645961707931" duration="53000" />
+      <workItem from="1645961855034" duration="1084000" />
+      <workItem from="1646773101536" duration="1207000" />
+      <workItem from="1646859124278" duration="2256000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

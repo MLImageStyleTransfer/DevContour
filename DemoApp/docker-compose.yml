@@ -1,0 +1,12 @@
+version: "1.0.0"
+
+services:
+  frontend:
+    build: frontend/
+    env_file:
+      - .env
+
+  backend:
+    build: backend/
+    env_file:
+      - .env

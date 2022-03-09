@@ -16,3 +16,9 @@ run:
 
 test:
 	${PYTHON3} ${TESTS_PATH}
+
+up_service:
+	make clear
+	make venv
+	make install_requirements
+	make run
