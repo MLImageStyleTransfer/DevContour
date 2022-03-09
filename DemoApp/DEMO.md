@@ -17,4 +17,5 @@
 - ssr + next?
 - swagger?
 - ports
+- tests
 
