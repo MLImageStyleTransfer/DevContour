@@ -5,14 +5,16 @@
 1. Testing service relations
 2. Process simulation
 
-### General Setup
+### WIP: General Setup (pseudo)
 
-- todo
+- `"install docker"`
+- `"run docker-compose"`
 
-### TODO
+### WIP: TODO
 - code review
 - environment usage
 - docker
 - ssr + next?
 - swagger?
+- ports
 
