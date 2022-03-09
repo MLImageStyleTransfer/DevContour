@@ -6,3 +6,8 @@ Contour for demo testing
 - DemoApp
 
 ### TODO
+- code review
+- environment usage
+- docker
+- ssr + next?
+- swagger?
